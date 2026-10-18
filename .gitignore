@@ -1,0 +1,22 @@
+# Local state holds resource details; never commit it.
+*.tfstate
+*.tfstate.*
+.terraform/
+crash.log
+crash.*.log
+tfplan
+*.tfplan
+
+# Real variable values stay local; the example file is committed.
+*.tfvars
+*.tfvars.json
+
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Service account key files.
+*-key.json
+*credentials*.json
+service-account*.json
