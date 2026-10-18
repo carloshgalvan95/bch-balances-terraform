@@ -1,3 +1,4 @@
 # Copy to terraform.tfvars and fill in. terraform.tfvars is gitignored.
-project_id      = "bch-balances-<suffix>"
-billing_account = "<BILLING_ACCOUNT_ID>"
+project_id           = "bch-balances-<suffix>"
+billing_account      = "<BILLING_ACCOUNT_ID>"
+github_repository_id = "<NUMERIC_REPO_ID>"

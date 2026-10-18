@@ -29,3 +29,13 @@ variable "location" {
   type        = string
   default     = "US"
 }
+
+variable "github_repository_id" {
+  description = "Numeric id of the dbt GitHub repo allowed to use WIF (carloshgalvan95/bch-balances-dbt; get it with: gh api repos/carloshgalvan95/bch-balances-dbt --jq .id). Unlike a name, it is never reused. A reviewer rebuilding from a fork puts their own repo id here; no code edit needed."
+  type        = string
+
+  validation {
+    condition     = can(regex("^[0-9]+$", var.github_repository_id))
+    error_message = "github_repository_id must be the numeric repository id, digits only."
+  }
+}
