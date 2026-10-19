@@ -25,7 +25,7 @@ variable "region" {
 }
 
 variable "location" {
-  description = "BigQuery dataset location. Must match the public source dataset (US), since BigQuery cannot join across locations."
+  description = "BigQuery dataset location. Must match the public source dataset (US), since a standard query runs in a single location."
   type        = string
   default     = "US"
 }

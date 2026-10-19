@@ -5,9 +5,9 @@ resource "google_project" "main" {
   project_id      = var.project_id
   billing_account = var.billing_account
 
-  # PREVENT makes any plan that would delete the project fail. A deleted project
-  # ID can never be reused and holds a quota slot for 30 days. To tear down,
-  # change this to "DELETE", apply, then destroy.
+  # PREVENT blocks only the project delete, which runs last: a plain destroy
+  # removes everything else first. A deleted project ID can never be reused
+  # and holds a quota slot for 30 days. To tear down, see README Teardown.
   deletion_policy = "PREVENT"
 }
 
