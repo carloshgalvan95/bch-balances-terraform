@@ -74,9 +74,9 @@ Built and applied step by step on Windows with Git Bash; the single-run sequence
 
 1. Get the numeric id of the dbt repo:
    ```bash
-   gh api repos/carloshgalvan95/bch-balances-dbt --jq .id
+   gh api repos/<owner>/bch-balances-dbt --jq .id
    ```
-   Expected: a number (the repo id). If you rebuild from a fork, use your fork's id. No code change is needed.
+   Replace `<owner>` with the account that owns the dbt repo (your fork's owner if you rebuild from a fork). Expected: a number (the repo id). No code change is needed.
 
 2. Create your variables file and fill it in:
    ```bash
