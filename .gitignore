@@ -20,3 +20,6 @@ override.tf.json
 *-key.json
 *credentials*.json
 service-account*.json
+.env
+.env.*
+.venv/
