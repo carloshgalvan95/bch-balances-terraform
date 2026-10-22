@@ -68,7 +68,7 @@ Set up before the first run (outside this repo's Terraform):
 - Quota project: not needed in testing. On a 403 about it, set `USER_PROJECT_OVERRIDE=true` and `GOOGLE_BILLING_PROJECT=<another project you own>` (not the one this repo creates), where you have `serviceusage.services.use`; the APIs Terraform calls may need to be enabled there too.
 - gh CLI, logged in with `gh auth login`, only to read the dbt repo id (or read it from the GitHub API by other means).
 
-Built and applied step by step on Windows with Git Bash; the single-run sequence below is pending a clean-room test. Run every command from the repo root: Terraform writes `.terraform/` and `terraform.tfstate` in the current folder.
+Built and applied step by step on Windows with Git Bash. Clean-room tested on 2026-10-21 in a clean WSL Ubuntu with tools installed from scratch, from a public clone, using the author's own Google and GitHub accounts and a new private copy of the dbt repo standing in for a fork. A different billing account, organization policies and real fork pull requests were not tested. Run every command from the repo root: Terraform writes `.terraform/` and `terraform.tfstate` in the current folder.
 
 ## Steps
 
